@@ -1,0 +1,50 @@
+<odoo>
+    <data>
+        <!-- Vista de árbol para Ordezkaritzas -->
+        <record id="view_ordezkaritza_tree" model="ir.ui.view">
+            <field name="name">ordezkaritza.tree</field>
+            <field name="model">ordezkaritzak.ordezkaritza</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="izena"/>
+                    <field name="helbidea"/>
+                    <field name="zuzendaria"/>
+                    <field name="nif"/>
+                    <field name="mota"/>
+                    <field name="probintzia"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Vista de formulario para Ordezkaritzas -->
+        <record id="view_ordezkaritza_form" model="ir.ui.view">
+            <field name="name">ordezkaritza.form</field>
+            <field name="model">ordezkaritzak.ordezkaritza</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="izena"/>
+                            <field name="helbidea"/>
+                            <field name="zuzendaria"/>
+                            <field name="nif"/>
+                            <field name="mota"/>
+                            <field name="probintzia"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Acción para abrir la vista de Ordezkaritzas -->
+        <record id="action_ordezkaritza" model="ir.actions.act_window">
+            <field name="name">Ordezkaritzas</field>
+            <field name="res_model">ordezkaritzak.ordezkaritza</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_ordezkaritza_tree"/>
+        </record>
+
+        <!-- Menú para acceder a las Ordezkaritzas -->
+        <menuitem id="menu_ordezkaritza" name="Ordezkaritzas" action="action_ordezkaritza" sequence="10"/>
+    </data>
+</odoo>

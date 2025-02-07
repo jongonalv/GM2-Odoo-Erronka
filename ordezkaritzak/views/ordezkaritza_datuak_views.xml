@@ -1,0 +1,46 @@
+<odoo>
+    <data>
+        <menuitem id="menu_ordezkaritza" name="Ordezkaritza" sequence="1"/>
+
+        
+        <record id="view_ordezkaritza_datuak_tree" model="ir.ui.view">
+            <field name="name">ordezkaritza.datuak.tree</field>
+            <field name="model">ordezkaritzak.datuak</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="ordezkaritza"/>
+                    <field name="zuzendaria"/>
+                    <field name="hasieraData"/>
+                    <field name="amieraData"/>
+                    <field name="irabaziak"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_ordezkaritza_datuak_form" model="ir.ui.view">
+            <field name="name">ordezkaritza.datuak.form</field>
+            <field name="model">ordezkaritzak.datuak</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="ordezkaritza"/>
+                            <field name="zuzendaria"/>
+                            <field name="hasieraData"/>
+                            <field name="amieraData"/>
+                            <field name="irabaziak"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_ordezkaritza_datuak" model="ir.actions.act_window">
+            <field name="name">Ordezkaritza Datuak</field>
+            <field name="res_model">ordezkaritzak.datuak</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_ordezkaritza_datuak" name="Ordezkaritza Datuak" parent="menu_ordezkaritza" action="action_ordezkaritza_datuak"/>
+    </data>
+</odoo>

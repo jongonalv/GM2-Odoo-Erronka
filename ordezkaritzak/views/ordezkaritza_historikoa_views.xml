@@ -1,0 +1,45 @@
+<odoo>
+    <data>
+        <record id="view_ordezkaritza_historikoa_tree" model="ir.ui.view">
+            <field name="name">ordezkaritza.historikoa.tree</field>
+            <field name="model">ordezkaritzak.historikoa</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="ordezkaritza"/>
+                    <field name="hasieraData"/>
+                    <field name="amieraData"/>
+                    <field name="nif"/>
+                    <field name="mota"/>
+                    <field name="probintzia"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_ordezkaritza_historikoa_form" model="ir.ui.view">
+            <field name="name">ordezkaritza.historikoa.form</field>
+            <field name="model">ordezkaritzak.historikoa</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="ordezkaritza"/>
+                            <field name="hasieraData"/>
+                            <field name="amieraData"/>
+                            <field name="nif"/>
+                            <field name="mota"/>
+                            <field name="probintzia"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_ordezkaritza_historikoa" model="ir.actions.act_window">
+            <field name="name">Ordezkaritza Historikoa</field>
+            <field name="res_model">ordezkaritzak.historikoa</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_ordezkaritza_historikoa" name="Ordezkaritza Historikoa" parent="menu_ordezkaritza" action="action_ordezkaritza_historikoa"/>
+    </data>
+</odoo>
