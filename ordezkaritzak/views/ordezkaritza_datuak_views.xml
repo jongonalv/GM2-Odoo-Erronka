@@ -21,7 +21,7 @@
             <field name="name">ordezkaritza.datuak.form</field>
             <field name="model">ordezkaritzak.datuak</field>
             <field name="arch" type="xml">
-                <form>
+                <form create="false" edit="false">
                     <sheet>
                         <group>
                             <field name="ordezkaritza"/>
