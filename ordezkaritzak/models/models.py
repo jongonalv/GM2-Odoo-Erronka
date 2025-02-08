@@ -11,6 +11,7 @@ ordezkaritza_motak = [
 class Ordezkaritza(models.Model):
     _name = 'ordezkaritzak.ordezkaritza'
     _description = 'Ordezkaritza'
+    _rec_name = 'izena'
 
     izena = fields.Char(string="Izena", required=True)
     helbidea = fields.Char(string="Helbidea", required=True)
