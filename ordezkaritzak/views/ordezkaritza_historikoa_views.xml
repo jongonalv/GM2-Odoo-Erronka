@@ -5,7 +5,7 @@
             <field name="model">ordezkaritzak.historikoa</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="ordezkaritza"/>
+                    <field name="izena"/>
                     <field name="hasieraData"/>
                     <field name="amieraData"/>
                     <field name="nif"/>
@@ -22,7 +22,7 @@
                 <form create="false" edit="false">
                     <sheet>
                         <group>
-                            <field name="ordezkaritza"/>
+                            <field name="izena"/>
                             <field name="hasieraData"/>
                             <field name="amieraData"/>
                             <field name="nif"/>
