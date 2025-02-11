@@ -99,6 +99,7 @@
         <field name="arch" type="xml">
             <xpath expr="//page[@name='hr_settings']" position="after">
                 <page string="Ordezkaritza">
+                    <label for="ordezkaritza" string="Ordezkaritza"/>
                     <field name="ordezkaritza"/>
                 </page>
             </xpath>

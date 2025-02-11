@@ -25,7 +25,8 @@ Long description of module's purpose
         'views/ordezkaritza_views.xml',
         'views/ordezkaritza_historikoa_views.xml',
         'views/ordezkaritza_datuak_views.xml',
-        'views/lagileak_gehitu_ordezkaritza.xml'
+        'views/lagileak_gehitu_ordezkaritza.xml',
+        'views/fakturak_gehitu_ordezkaritza.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

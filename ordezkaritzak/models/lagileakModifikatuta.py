@@ -1,7 +1,5 @@
 
-
 from odoo import models, fields, api
-
 
 
 class Langilea(models.Model):
@@ -12,4 +10,4 @@ class Langilea(models.Model):
 class AccountMove(models.Model):
     _inherit = 'account.move'
 
-    ordezkaritza = fields.Many2one('ordezkaritzak.ordezkaritza', string="Ordezkaritza")
+    ordezkaritza = fields.Many2one('ordezkaritzak.ordezkaritza', string="Ordezkaritza", required=True)
