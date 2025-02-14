@@ -12,6 +12,9 @@
                     <field name="nif"/>
                     <field name="mota"/>
                     <field name="probintzia"/>
+                    <field name="email" widget="email"/>
+                    <field name="telefonoa" widget="phone"/>
+                    <field name="postal_kodea"/>
                 </tree>
             </field>
         </record>
@@ -30,6 +33,9 @@
                             <field name="nif"/>
                             <field name="mota"/>
                             <field name="probintzia"/>
+                            <field name="email" widget="email"/>
+                            <field name="telefonoa" widget="phone"/>    
+                            <field name="postal_kodea" />    
                         </group>
                     </sheet>
                 </form>

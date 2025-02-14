@@ -22,6 +22,8 @@ Long description of module's purpose
 
     # always loaded
     'data': [
+        'data/groups.xml',
+        'security/ir.model.access.csv',
         'views/ordezkaritza_views.xml',
         'views/ordezkaritza_historikoa_views.xml',
         'views/ordezkaritza_datuak_views.xml',

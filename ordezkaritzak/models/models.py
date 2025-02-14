@@ -2,6 +2,7 @@
 
 from odoo import models, fields, api
 from datetime import datetime
+from odoo.exceptions import ValidationError
 
 ordezkaritza_motak = [
     ('mota1', 'Lehen Mailaka'),
@@ -19,6 +20,24 @@ class Ordezkaritza(models.Model):
     nif = fields.Char(string="NIF", required=True)
     mota = fields.Selection(ordezkaritza_motak, string="Mota", required=True)
     probintzia = fields.Char(string="Probintzia", required=True)
+    email = fields.Char(string="Email", required=True)
+    telefonoa = fields.Char(string="Telefonoa", required=True)
+    postal_kodea = fields.Char(string="Postal Kodea", required=True)  
+
+
+    # helbidea, postal_kodea eta telefonoa berdinak ez direla komprobatzen duen metodoa
+    @api.constrains('helbidea', 'postal_kodea', 'telefonoa')
+    def _check_unique_address(self):
+        for record in self:
+            existing_records = self.search([
+                ('helbidea', '=', record.helbidea),
+                ('postal_kodea', '=', record.postal_kodea),
+                ('telefonoa', '=', record.telefonoa),
+                ('id', '!=', record.id)
+            ])
+            if existing_records:
+                raise ValidationError("Ezin dira helbide, postal kode eta telefono bera dueten ordezkaritzarik.")
+                
 
     @api.model
     def create(self, vals):

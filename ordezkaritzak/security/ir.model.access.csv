@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_ordezkaritzak_ordezkaritzak,ordezkaritzak.ordezkaritzak,model_ordezkaritzak_ordezkaritzak,base.group_user,1,1,1,1
+access_ordezkaritzak_system,Ordezkaritzak Admin,model_ordezkaritzak_ordezkaritza,base.group_system,1,1,1,1
+access_ordezkaritzak_custom,Ordezkaritzak Admin,model_ordezkaritzak_ordezkaritza,ordezkaritzak.group_ordezkaritzak,1,1,1,1
